@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+</head>
+<body>
+    <h1>Notes</h1>
+    <form action="/notes/" method="post">
+        <label for="note">Type your note:</label><br>
+        <input type="text" id="note" name="content"><br>
+        <button type="submit">Add Note</button>
+    </form>
+    <form action="/reset/" method="post">
+        <button type="submit">Reset Notes</button>
+    </form>
+    <h2>List of Notes:</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.content }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
