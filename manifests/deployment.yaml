@@ -16,4 +16,4 @@ spec:
       - name: webapp
         image: nishchay18/ai-planet-web-app:latest
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
