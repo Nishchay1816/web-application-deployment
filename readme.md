@@ -40,6 +40,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl get pods -n argocd
 kubectl -n argocd get all
 kubectl edit svc argocd-server -n argocd : Change type to NodePort
+```
+We can also use LoadBalancer when using cloud providers for running kubernetes, but on local system or minikube it does not work
+```bash
 kubectl get nodes -o wide : To get Ip of kubernetes node
 kubectl get svc : To get port of kubernetes node
 kubectl port-forward svc/argocd-server -n argocd --address 0.0.0.0 8080:443
