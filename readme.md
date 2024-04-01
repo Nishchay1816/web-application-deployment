@@ -9,6 +9,9 @@ Activate : venv\Scripts\activate
 For creating webpage
 pip install fastapi
 pip install "uvicorn[standard]"
+pip install Jinja2
+pip install python-multipart
+uvicorn main:app --reload
 ```
 
 
