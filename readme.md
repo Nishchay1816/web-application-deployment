@@ -25,10 +25,7 @@ Invoke-WebRequest -OutFile 'c:\minikube\minikube.exe' -Uri 'https://github.com/k
 
 ### Setting up env variables :
 ```powershell
-$oldPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine)
-if ($oldPath.Split(';') -inotcontains 'C:\minikube'){
-  [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine)
-}
+$env:Path += ";C:\Users\nishchay16\Desktop\webapp\minikube"
 ```
 ```powershell
 minikube start
